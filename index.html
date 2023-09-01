@@ -16,6 +16,14 @@
             <source src="https://drive.google.com/uc?export=download&id=1_0KKYJeolLmzNWx6CT4mf-CSFa1cuI66"
                 type="audio/mpeg">
         </audio>
+        <audio id="drama" loop> <!-- 場景 -->
+            <source src="https://drive.google.com/uc?export=download&id=1Sbw5LUnbTO5Xaihn7eyiVhum134ldEwY"
+                type="audio/mpeg">
+        </audio>
+        <audio id="breakfast" loop> <!-- 場景 -->
+            <source src="https://drive.google.com/uc?export=download&id=1gZ33lGoMx3Ha1jThE8FeSUT19SibMhof"
+                type="audio/mpeg">
+        </audio>
         <audio id="rain" loop> <!-- 場景1/2/3 -->
             <source src="https://drive.google.com/uc?export=download&id=13j5PPurZODysLa6nraQ3NEL1QhF5u2WY"
                 type="audio/mpeg">
@@ -30,6 +38,22 @@
         </audio>
         <audio id="bbibbi" loop> <!-- 場景30/31 -->
             <source src="https://drive.google.com/uc?export=download&id=1mnkTawvkRkpWMcNB8d9UA7VJQJRaorkr"
+                type="audio/mpeg">
+        </audio>
+        <audio id="helicopter" loop> <!-- 場景22/38 -->
+            <source src="https://drive.google.com/uc?export=download&id=1-nXfNl9_AQJNA928K8n1Is6gPUNPKswa"
+                type="audio/mpeg">
+        </audio>
+        <audio id="happy" loop> <!-- 場景 -->
+            <source src="https://drive.google.com/uc?export=download&id=17nU9UEPa7VOSmN8D1pRNJV9RyA3m3oaP"
+                type="audio/mpeg">
+        </audio>
+        <audio id="talk" loop> <!-- 場景 -->
+            <source src="https://drive.google.com/uc?export=download&id=1-vhtvo5dt1CuhfLcsiknWRIlOMP4BkoV"
+                type="audio/mpeg">
+        </audio>
+        <audio id="ambience" loop> <!-- 場景 -->
+            <source src="https://drive.google.com/uc?export=download&id=1ZVnP_zKl7tYFtDQ8u9KVoEBMbN8s3S2E"
                 type="audio/mpeg">
         </audio>
         <audio id="s1" loop> <!-- 手機撥號聲 -->
@@ -111,36 +135,6 @@
             background-image: url('YOUR_BACKGROUND_IMAGE_URL');
         }
 
-        #video-background,
-        #s5video,
-        #s7video,
-        #s9video,
-        #s10video,
-        #s13video,
-        #s15video,
-        #s16video,
-        #s17video,
-        #s19video,
-        #s22video,
-        #s27video,
-        #s35video,
-        #s37video,
-        #s41video,
-        #s43video,
-        #s58video,
-        #s62video,
-        #s67video {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -100;
-            transform: translateX(-50%) translateY(-50%);
-        }
-
         h1 {
             margin-bottom: 20px;
             /* 底部間距：20像素 */
@@ -156,27 +150,7 @@
             display: none;
         }
 
-        #storyContainer {
-            /* 故事容器的樣式 */
-            position: relative;
-            /* 水平居中對齊 */
-            justify-content: baseline;
-            /* 相對或絕對定位 */
-            border: 3pt solid rgba(30, 44, 99, 0.6);
-            /* 藍色的框線，粗3pt */
-            padding: 10px 60px 10px 60px;
-            /* 內邊距：10像素 */
-            order: 2;
-            margin: 15px;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 10px;
-            text-align: start;
-            color: #232342;
-            bottom: 5px;
-            margin-top: 360px;
-        }
-
-        /* 圓角半徑：10像素 */
+        /* 介紹樣式 */
         #intro {
             font-size: 16px;
             /* 字體大小：16像素 */
@@ -209,21 +183,89 @@
             /* 距離底部的距離 */
         }
 
-        .button-container {
-            /* 按鈕容器的樣式 */
+        /* 開始螢幕的樣式 */
+        .start-screen,
+        .start-screen1,
+        .start-screen2 {
             display: flex;
             /* 使用 Flexbox 顯示內容 */
+            flex-direction: column;
+            /* Flex容器中的內容垂直排列 */
             align-items: center;
             /* 垂直居中對齊 */
             justify-content: center;
             /* 水平居中對齊 */
-            position: relative;
-            /* 相對或絕對定位 */
-            margin-top: 10px;
+            text-align: center;
+            color: rgba(#232342);
+            margin-top: 100px;
+            /* 移除預設的 margin */
+            padding: 0px;
+            /* 移除預設的 padding */
+            width: auto;
+            border-radius: 10px;
+            text-align: center;
             bottom: 0px;
-            /* 距離底部的距離 */
         }
 
+        .start-screen,
+        .start-screen1,
+        .start-screen2 h1 {
+            text-align: center;
+        }
+
+        /* 影片樣式 */
+        #video-background,
+        #s5video,
+        #s7video,
+        #s9video,
+        #s10video,
+        #s13video,
+        #s15video,
+        #s16video,
+        #s17video,
+        #s19video,
+        #s22video,
+        #s27video,
+        #s35video,
+        #s37video,
+        #s41video,
+        #s43video,
+        #s58video,
+        #s62video,
+        #s67video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        /* 故事文本框樣式 */
+        #storyContainer {
+            /* 故事容器的樣式 */
+            position: relative;
+            /* 水平居中對齊 */
+            justify-content: baseline;
+            /* 相對或絕對定位 */
+            border: 3pt solid rgba(30, 44, 99, 0.6);
+            /* 藍色的框線，粗3pt */
+            padding: 10px 60px 10px 60px;
+            /* 內邊距：10像素 */
+            order: 2;
+            margin: 15px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            text-align: start;
+            color: #232342;
+            bottom: 5px;
+            margin-top: 360px;
+        }
+
+        /* 選項按鍵樣式 */
         #optionBtn1,
         #optionBtn2 {
             /* 按鈕的樣式 */
@@ -250,6 +292,7 @@
 
         }
 
+        /* 分數相關按鍵樣式 */
         .action-btn-container {
             display: flex;
             justify-content: center;
@@ -270,32 +313,19 @@
             height: auto;
         }
 
-        .start-screen,
-        .start-screen1 {
-            /* 開始螢幕的樣式 */
+        .button-container {
+            /* 按鈕容器的樣式 */
             display: flex;
             /* 使用 Flexbox 顯示內容 */
-            flex-direction: column;
-            /* Flex容器中的內容垂直排列 */
             align-items: center;
             /* 垂直居中對齊 */
             justify-content: center;
             /* 水平居中對齊 */
-            text-align: center;
-            color: rgba(#232342);
-            margin-top: 100px;
-            /* 移除預設的 margin */
-            padding: 0px;
-            /* 移除預設的 padding */
-            width: auto;
-            border-radius: 10px;
-            text-align: center;
+            position: relative;
+            /* 相對或絕對定位 */
+            margin-top: 10px;
             bottom: 0px;
-        }
-
-        .start-screen,
-        .start-screen1 h1 {
-            text-align: center;
+            /* 距離底部的距離 */
         }
 
         .button {
@@ -316,12 +346,14 @@
             /* 距離底部的距離 */
         }
 
+        /* 計時器外框樣式 */
         #timer-container {
             position: absolute;
             top: 20px;
             right: 20px;
         }
 
+        /* 計時器樣式 */
         #timer {
             text-align: center;
             margin-top: 10px;
@@ -330,7 +362,7 @@
             /* 內邊距：12像素頂部和底部，24像素左側和右側 */
             font-size: 18px;
             /* 字體大小：18像素 */
-            background-color: #192f66;
+            background-color: red;
             /* 背景顏色：午夜 */
             color: white;
             /* 文字顏色：白色 */
@@ -389,7 +421,7 @@
                 alt="Title Image" style="width: 85%; padding: 0 0 60px 0px; position: inherit;">
             <p id="intro">讓風帶走傷痛....一場跨越維度充滿情感的旅程，在循環的迭代中，一同探索故事的深度，體驗生命的無常.....</p>
             <!-- 開始遊戲 鍵 -->
-            <div id="startBtn"class="button">
+            <div id="startBtn" class="button">
                 <img src="https://media.discordapp.net/attachments/1086217785794899998/1144563552368218222/-15.png"
                     alt="nextBtn Icon" style="width: 80%;">
             </div>
@@ -404,6 +436,20 @@
             <p id="intro">讓風帶走傷痛....一場跨越維度充滿情感的旅程，在循環的迭代中，一同探索故事的深度，體驗生命的無常.....</p>
             <!-- 開始遊戲1 鍵 -->
             <div id="startBtn1" class="button">
+                <img src="https://media.discordapp.net/attachments/1086217785794899998/1144563552368218222/-15.png"
+                    alt="nextBtn Icon" style="width: 80%;">
+            </div>
+        </div>
+        <div class="start-screen2" style="display: none;">
+            <video autoplay loop muted id="video-background">
+                <source src="https://drive.google.com/uc?export=download&id=1sDW_XSGvPLJoHnvNytwScWyyNjv6OIEH"
+                    type="video/mp4">
+            </video>
+            <img src="https://media.discordapp.net/attachments/1086185318895603744/1139142350648651837/-02.png"
+                alt="Title Image" style="width: 80%; padding: 0 0 70px 0px; position: inherit;">
+            <p id="intro">讓風帶走傷痛....一場跨越維度充滿情感的旅程，在循環的迭代中，一同探索故事的深度，體驗生命的無常.....</p>
+            <!-- 開始遊戲2 鍵 -->
+            <div id="startBtn2" class="button">
                 <img src="https://media.discordapp.net/attachments/1086217785794899998/1144563552368218222/-15.png"
                     alt="nextBtn Icon" style="width: 80%;">
             </div>
@@ -435,17 +481,21 @@
                 <img src="https://media.discordapp.net/attachments/1086185318895603744/1140291223391838258/-12.png?width=80&height=81"
                     alt="Skip Icon" style="width: 80px; height: 80px;">
             </div>
+            <!-- home鍵-skip2 -->
+            <div id="skipBtn2" style="display: none; position: fixed; bottom: 20px; right: 20px; cursor: pointer;">
+                <img src="https://media.discordapp.net/attachments/1086185318895603744/1140291223391838258/-12.png?width=80&height=81"
+                    alt="Skip2 Icon" style="width: 80px; height: 80px;">
+            </div>
             <!-- 下一頁 鍵 -->
             <button id="nextBtn" class="button">
                 <img src="https://media.discordapp.net/attachments/1086217785794899998/1144563553148354570/-13.png"
                     alt="nextBtn Icon" style="width: 80%;">
             </button>
             <!-- 解鎖新角色 鍵 -->
-            <div id="unlockBtn"
-                style="display: none; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); cursor: pointer;">
+            <button id="unlockBtn" class="button">
                 <img src="https://media.discordapp.net/attachments/1086217785794899998/1144563553509056562/-14.png"
                     alt="unlockBtn Icon" style="width: 80%;">
-            </div>
+            </button>
         </div>
         <!-- 按鈕容器 -->
         <div class="button-container">
@@ -548,25 +598,26 @@
         const scenes = [
             // 場景0 1-1（開始）
             {
-                story: "乘載著數以萬計的思念........一通通沒有回音的電話，支撐著倖存者繼續走下去。",
+                story: "乘載著數以萬計的思念...一通通沒有回音的電話，支撐著倖存者繼續走下去。",
                 hasOptions: false,
                 nextScene: 1
             },
             // 場景1 1-2                
             {
-                story: "在微涼的秋日大衣，將身軀包裹著嚴實，慢慢走進了電話亭，給妻子打電話。",
+                story: "在微涼的秋日，大衣將我的身軀嚴實包裹著，我慢慢地走進了電話亭，給逝去的妻子撥打電話。",
                 hasOptions: false,
                 nextScene: 2
             },
+
             // 場景2 1-3
             {
-                story: "已是數不清幾年前的對話，我清了清沙啞喉嚨 小心地說了一聲 「 老婆是你嗎？」",
+                story: "已數不清過了多少年，我清了清沙啞的喉嚨 小心地說了一聲 「 親愛的，是你嗎？」",
                 hasOptions: false,
                 nextScene: 3
             },
             // 場景3 1-4
             {
-                story: "「對不起....沒能救你」話音剛落，淚水從我的臉龐滑落，胸口的酸楚疼痛，幾乎快要窒息...",
+                story: "「對不起...我沒能夠救你」話音剛落，淚水從我的臉龐滑落，胸口的酸楚疼痛，幾乎快要窒息...",
                 hasOptions: false,
                 nextScene: 4
             },
@@ -601,7 +652,7 @@
             },
             // 場景8 2a-1
             {
-                story: "行經過程中，指示牌的引導路線似乎不太清楚，我慢慢的迷失了方向...",
+                story: "行經過程中，指示牌的引導路線似乎不太清楚，我慢慢地迷失了方向...",
                 hasOptions: false,
                 nextScene: 9
             },
@@ -642,7 +693,7 @@
             },
             // 場景14 3b-1b-1
             {
-                story: "海水慢慢退去，我拖著疲憊的身軀，奮力爬到高處，繼續尋找著妻子，這次，我一定會拯救她！",
+                story: "海水慢慢退去，我拖著疲憊的身軀，奮力爬到高處，繼續尋找著妻子，終於，我在頂樓看到了年輕的她，剎那間，種種回憶湧上心頭...",
                 hasOptions: false,
                 nextScene: 16
             },
@@ -654,9 +705,9 @@
             },
             // 場景16 4-1
             {
-                story: "我繼續地往高處移動，終於，我在頂樓看到了年輕的她，她還是那麼的美...等等，她的膝蓋受了傷！",
+                story: "我看著妻子，她依然是那麼的美...等等，她的膝蓋受了傷！",
                 hasOptions: true,
-                option1Text: "真的是你嗎？激動的走向前擁抱妻子。",
+                option1Text: "真的是你嗎？不顧一切地走向前擁抱妻子。",
                 option1NextScene: 17,
                 option2Text: "傷口要緊，我得忍住內心的激動情緒，先去尋找飯店有無救援物資，幫助她消毒。",
                 option2NextScene: 20,
@@ -706,7 +757,7 @@
             },
             // 場景23 5-3
             {
-                story: "志工團隊也及時帶來物資，毛毯、食物...等等，我排隊拿了一些毛毯和食物，讓妻子能夠即時保持溫暖和充飢。",
+                story: "志工團隊也及時帶來物資，包含毛毯以及食物，我排隊拿了一些物資，讓妻子能夠即時保持溫暖和充飢。",
                 hasOptions: false,
                 nextScene: 24
             },
@@ -714,7 +765,7 @@
             {
                 story: "啊！突然電力瞬間關閉！救難所發生了二次餘震！廣播：因二次餘震導致電力丟失，請大家不要慌張，海水浴場監察部門正在導入提前預備的緊急電力，電力將在十分鐘後恢復。",
                 hasOptions: true,
-                option1Text: "妻子看起來很緊張，我趕緊安撫她，「別擔心! 有我在! 我一定會帶你離開！」她用充滿感激的眼神看著我。",
+                option1Text: "妻子看起來很緊張，我趕緊安撫她，「別擔心! 我一定會帶你離開！」她充滿感激地看著我。",
                 option1NextScene: 25,
                 option2Text: "先平靜下來，等電力恢復後再移動。",
                 option2NextScene: 28,
@@ -906,7 +957,7 @@
             },
             // 場景53 解鎖新角色-消防員
             {
-                story: "解鎖新角色",
+                story: "",
                 hasOptions: false,
                 nextScene: 54
             },
@@ -995,7 +1046,7 @@
             {
                 story: "【遊戲結束】災害發生時，消防隊員需盡快評估災情，同時應立即與上級機構或相關單位聯繫，並請求額外的支援。這將有助於確保足夠的人力、資源和專業知識來應對災害。",
                 hasOptions: false,
-                nextScene: 48
+                nextScene: 72
             },
             // 場景66
             {
@@ -1032,7 +1083,6 @@
                 hasOptions: false,
                 nextScene: 0
             },
-
         ];
         // 遊戲圖片URL數組
         const backgroundURLs = [
@@ -1108,13 +1158,10 @@
             'https://media.discordapp.net/attachments/1085894250094407680/1143760531308687500/100.png?width=928&height=520', //場景69
             'https://media.discordapp.net/attachments/1086217785794899998/1146465262976122951/-01.png?width=1764&height=988', //場景70
             'https://media.discordapp.net/attachments/1086217785794899998/1146465264108576820/-02.png?width=1764&height=988', //場景71
+            'https://media.discordapp.net/attachments/1086217785794899998/1145661704521400330/1_3.png?width=1488&height=833', //場景72 40%
         ];
         // 遊戲進行時的當前場景索引
         let currentScene = 70;
-        // HOME 鍵元素
-        const homeBtn = document.getElementById('homeBtn');
-        // 提示按鈕元素
-        const hintBtn = document.getElementById('hintBtn');
         // 提示計數元素
         let hintCount = 3;
         // 計時器ID元素
@@ -1135,9 +1182,6 @@
             countdownSeconds--;
             if (countdownSeconds >= 0) {
                 timerElement.textContent = `剩餘時間：${countdownSeconds}秒`;
-                if (hintCount > 0) {
-                    hintBtn.textContent = `提示：${hintCount}次`;
-                }
                 // 每秒閃爍一次
                 if (countdownSeconds % 2 === 0) {
                     timerElement.style.backgroundColor = 'red';
@@ -1192,129 +1236,147 @@
             5: ['s5'],
             6: ['sea'],
             7: ['sea', 's7'],
+            8: ['sea', 's7'],
+            9: ['sea','helicopter','s7'],
             10: ['s10'],
+            11: ['drama'],
+            12: ['gameover'],
             13: ['gameover'],
+            14: ['drama'],
             17: ['s17'],
+            18: ['s17'],
+            19: ['s21','sea'],
             20: ['s20'],
-            21: ['s21'],
+            21: ['s21', 'sea'],
+            22: ['helicopter'],
+            23: ['s20','talk'],
+            24: ['s25', 'explode'],
             25: ['s25', 'explode'],
             26: ['explode'],
             27: ['gameover', 'explode'],
-            28: ['explode'],
+            28: ['s25', 'explode'],
             29: ['s29', 'argue'],
             30: ['argue', 'bbibbi'],
             31: ['gameover', 'bbibbi'],
-            32: ['s32'],
+            32: ['s32', 's4'],
+            33: ['gameover', 'bbibbi'],
             34: ['gameover'],
-            39: ['gameover'],
+            35: ['s4'],//緊張聲音
+            36: ['drama'], //出大事了！
+            37: ['drama'], //悲傷感人的聲音
+            38: ['s20', 'helicopter', 'drama'], 
+            39: ['drama','gameover'],
+            40: ['s29'],
+            41: ['breakfast'],//終於解決了太陽出來的感覺
+            42: ['s5'],
+            43: ['breakfast'],
+            44: ['breakfast'],
+            45: ['breakfast'],
+            46: ['gameover'],
+            47: ['happy'],
+            48: ['happy'],
+            49: ['happy'],
+            50: ['happy'],
+            51: ['happy'],
+            52: ['happy'],
+            53: ['happy'],//suprise解鎖鈴聲
+            54: ['sadtone'],
+            55: ['sadtone'],
+            56: ['sadtone'],
+            57: ['s5'],
+            59: ['s7', 's32'],//earthquake 人群尖叫
+            60: [''],//same
+            61: [''],//same
+            62: [''],//大樓倒塌超大聲
+            63: [''],
             65: ['gameover'],
+            70:['sea'],
+            71:['sea'],
+            72:['happy'],
         };
         let previousSoundElement = null;
-        //顯示場景
-        function showScene() {
-            console.log(`Showing scene ${currentScene}`);
-            stopAllSounds();
-            const scene = scenes[currentScene];
-            const storyElement = document.getElementById('story');
-            const text = storyElement.textContent = scene.story;
-            const bodyElement = document.body;
-            bodyElement.style.backgroundImage = `url('${backgroundURLs[currentScene]}')`;
-
-            // 音效相關代碼
-            function stopAllSounds() {
-                Object.values(sceneToSoundId).forEach(soundIds => {
-                    soundIds.forEach(soundId => {
-                        const soundElement = document.getElementById(soundId);
-                        if (soundElement) {
-                            soundElement.pause();
-                            soundElement.currentTime = 0; // 重置音效到開始位置
-                        }
-                    });
-                });
-            }
-
-            const soundIds = sceneToSoundId[currentScene];
-            if (soundIds) {
-                console.log(`Playing sounds: ${soundIds.join(', ')}`);
-                // 停止所有的音效
-                stopAllSounds();
-                // 播放所有在該場景需要播放的音效
+        let currentPlayingSounds = [];
+        // 音效相關代碼
+        function stopAllSounds() {
+            Object.values(sceneToSoundId).forEach(soundIds => {
                 soundIds.forEach(soundId => {
                     const soundElement = document.getElementById(soundId);
                     if (soundElement) {
-                        soundElement.play();
-                        previousSoundElement = soundElement;
+                        soundElement.pause();
+                        soundElement.currentTime = 0; // 重置音效到開始位置
                     }
                 });
-            } else {
-                console.log("No sound IDs found for the scene.");
-                // 停止所有的音效
-                stopAllSounds();
-                // 如果沒有對應的音效ID，播放 'sea' 音效
-                const seaElement = document.getElementById('sea');
-                if (seaElement) {
-                    seaElement.play();
-                    previousSoundElement = seaElement;
-                }
-            }
-
-
-            // 背景影片相關代碼
-            const backgroundVideos = [
-                's5video', 's7video', 's9video', 's10video', 's13video', 's15video',
-                's16video', 's17video', 's19video', 's22video', 's27video',
-                's35video', 's37video', 's41video', 's43video', 's58video',
-                's62video', 's67video'
-            ];
-            // 隱藏所有背景影片
-            backgroundVideos.forEach(videoId => {
-                const videoElement = document.getElementById(videoId);
-                if (videoElement) {
-                    videoElement.style.display = 'none';
-                }
             });
-            // 顯示目前場景的背景影片
-            const currentVideoElement = document.getElementById(`s${currentScene}video`);
-            if (currentVideoElement) {
-                currentVideoElement.style.display = 'block';
-            }
-
+        }
+        //顯示場景
+        function showScene() {
+            resetTimer();
+            const scene = scenes[currentScene];
+            const storyElement = document.getElementById('story');
+            const storyContainer = document.getElementById('storyContainer');
+            const unlockBtn = document.getElementById('unlockBtn');
+            const bodyElement = document.body;
+            bodyElement.style.backgroundImage = `url('${backgroundURLs[currentScene]}')`;
+            const text = storyElement.textContent = scene.story;
+            // 各按鈕元素
+            const homeBtn = document.getElementById('homeBtn');
+            const skipBtn = document.getElementById('skipBtn');
+            const skipBtn2 = document.getElementById('skipBtn2');
+            const hintBtn = document.getElementById('hintBtn');
             const optionBtn1 = document.getElementById('optionBtn1');
             const optionBtn2 = document.getElementById('optionBtn2');
             const nextBtn = document.getElementById('nextBtn');
-
-
-            // 重置計時器
-            resetTimer();
-            if (scene.hasOptions) {
-                optionBtn1.textContent = scene.option1Text;
-                optionBtn2.textContent = scene.option2Text;
-                optionBtn1.style.display = "block";
-                optionBtn2.style.display = "block";
-                nextBtn.style.display = "none";
-                timerElement.style.display = "block";
-                hintBtn.style.display = "block";
-                countdownSeconds = scene.countdownSeconds;
-                countdownSeconds = 10
-                timerElement.textContent = `剩餘時間：${countdownSeconds}秒`;
-                // 啟動計時器
-                clearInterval(timerId);
-                timerId = setInterval(updateTimer, 1000);
-            } else {
-                optionBtn1.style.display = "none";
-                optionBtn2.style.display = "none";
-                timerElement.style.display = "none";
-                hintBtn.style.display = "none";
-                nextBtn.style.display = "block";
-                clearInterval(timerId);
+            unlockBtn.style.display = "none";
+            nextBtn.style.display = "none";
+            optionBtn1.style.display = "none";
+            optionBtn2.style.display = "none";
+            timerElement.style.display = "none";
+            hintBtn.style.display = "none";
+            homeBtn.style.display = "none";
+            skipBtn.style.display = "none";
+            skipBtn2.style.display = "none";
+            //打字機代碼
+            let speed = 100;
+            let index = 0;
+            storyElement.textContent = '';
+            function textInput() {
+                if (index < text.length) {
+                    storyElement.append(text.charAt(index));
+                    index++;
+                    setTimeout(textInput, speed);
+                } else {
+                    afterTextComplete();
+                }
             }
-            const skipBtn = document.getElementById('skipBtn');
-            const homeBtn = document.getElementById('homeBtn');
+            function afterTextComplete() {
+                console.log("所有文字都已輸出完畢！");
+                if (scene.hasOptions) {
+                    startTimer();
+                    if (hintCount > 0) {
+                        hintBtn.textContent = `提示：${hintCount}次`;
+                    }
+                    nextBtn.style.display = "none"; // 先隱藏 nextBtn
+                    optionBtn1.textContent = scene.option1Text;
+                    optionBtn2.textContent = scene.option2Text;
+                    optionBtn1.style.display = "block";
+                    optionBtn2.style.display = "block";
+                    timerElement.style.display = "block";
+                    hintBtn.style.display = "block";
+                } else {
+                    if (currentScene === 46) { //時間到畫面不顯示下一頁按鍵
+                        alert("時間到！遊戲結束!");
+                        nextBtn.style.display = "none";
+                    } else {
+                        nextBtn.style.display = "block";
+                        optionBtn1.style.display = "none";
+                        optionBtn2.style.display = "none";
+                        timerElement.style.display = "none";
+                        hintBtn.style.display = "none";
+                    }
+                }
+            }
+            textInput();
 
-            if (currentScene === 46) { //時間到畫面不顯示下一頁按鍵
-                alert("遊戲結束!!");
-                nextBtn.style.display = "none";
-            };
             if (currentScene >= 47 && currentScene <= 51) {
                 story.style.display = 'none'; // 隱藏 story
                 const storyContainer = document.getElementById('storyContainer');
@@ -1342,6 +1404,8 @@
                         window.open(surveyLink1, '_blank');
                         currentScene = 52;
                         showScene();
+                        story.style.display = 'none'; // 隱藏 story
+                        storyContainer.style.display = 'none'; // 隱藏 storyContainer
                         openSurveyBtn1.style.display = 'none';
                     });
                 } else {
@@ -1362,7 +1426,6 @@
                 }
             } else {
                 story.style.display = 'block'; // 顯示 story
-                const storyContainer = document.getElementById('storyContainer');
                 storyContainer.style.display = 'block'; // 顯示 storyContainer
                 skipBtn.style.display = 'none';
                 homeBtn.style.display = 'block';
@@ -1371,15 +1434,17 @@
             }
             if (currentScene === 53) {
                 nextBtn.style.display = "none";
-                const unlockBtn = document.getElementById('unlockBtn');
-                unlockBtn.style.display = 'block';
-            };
-            if (currentScene === 69) {
-                alert("遊戲結束!!");
+                storyContainer.style.display = 'none'; // 隱藏 storyContainer
                 story.style.display = 'none'; // 隱藏 story
-                const storyContainer = document.getElementById('storyContainer');
+                unlockBtn.style.display = 'block';
+            }
+            if (currentScene === 69) {
+                story.style.display = 'none'; // 隱藏 story
                 storyContainer.style.display = 'none'; // 隱藏 storyContainer
                 nextBtn.style.display = "none";
+                homeBtn.style.display = "none";
+                skipBtn.style.display = "none";
+                skipBtn2.style.display = "block";
                 saveImageBtn.style.display = 'block';
                 openSurveyBtn.style.display = 'block';
                 // 保存背景圖片到本地相冊
@@ -1397,6 +1462,89 @@
                 story.style.display = 'none'; // 隱藏 story
                 storyContainer.style.display = 'none'; // 隱藏 storyContainer
             };
+            if (currentScene === 72) {
+                story.style.display = 'none'; // 隱藏 story
+                storyContainer.style.display = 'none'; // 隱藏 storyContainer
+                nextBtn.style.display = "none";
+                homeBtn.style.display = "none";
+                skipBtn.style.display = "none";
+                skipBtn2.style.display = "block";
+                saveImageBtn.style.display = 'block';
+                openSurveyBtn.style.display = 'block';
+                // 保存背景圖片到本地相冊
+                saveImageBtn.addEventListener('click', () => {
+                    const backgroundImageUrl = backgroundURLs[currentScene];
+                    saveImageToAlbum(backgroundImageUrl);
+                });
+                // 打開問卷連結
+                openSurveyBtn.addEventListener('click', () => {
+                    const surveyLink = 'https://www.surveycake.com/s/pkWbV';
+                    window.open(surveyLink, '_blank');
+                });
+            };
+
+            //音效相關代碼
+            const soundIds = sceneToSoundId[currentScene];
+            if (soundIds) {
+                console.log(`Playing sounds: ${soundIds.join(', ')}`);
+                // 停止之前播放的不再需要的音效
+                const soundsToStop = currentPlayingSounds.filter(soundId => !soundIds.includes(soundId));
+                soundsToStop.forEach(soundId => {
+                    const soundElement = document.getElementById(soundId);
+                    if (soundElement) {
+                        soundElement.pause();
+                        soundElement.currentTime = 0;
+                        const soundIndex = currentPlayingSounds.indexOf(soundId);
+                        if (soundIndex > -1) {
+                            currentPlayingSounds.splice(soundIndex, 1);
+                        }
+                    }
+                });
+                // 播放新的音效，將其添加到 currentPlayingSounds 中
+                soundIds.forEach(soundId => {
+                    const soundElement = document.getElementById(soundId);
+                    if (soundElement && !currentPlayingSounds.includes(soundId)) {
+                        soundElement.play();
+                        currentPlayingSounds.push(soundId);
+                    }
+                });
+            } else {
+                console.log("No sound IDs found for the scene.");
+                // 停止所有的共通音效，但保留其他音效
+                const commonSoundsToStop = currentPlayingSounds.filter(soundId => {
+                    return sceneToSoundId[currentScene - 1] && sceneToSoundId[currentScene - 1].includes(soundId);
+                });
+                commonSoundsToStop.forEach(soundId => {
+                    const soundElement = document.getElementById(soundId);
+                    if (soundElement) {
+                        soundElement.pause();
+                        soundElement.currentTime = 0;
+                        const soundIndex = currentPlayingSounds.indexOf(soundId);
+                        if (soundIndex > -1) {
+                            currentPlayingSounds.splice(soundIndex, 1);
+                        }
+                    }
+                });
+            }
+            // 背景影片相關代碼
+            const backgroundVideos = [
+                's5video', 's7video', 's9video', 's10video', 's13video', 's15video',
+                's16video', 's17video', 's19video', 's22video', 's27video',
+                's35video', 's37video', 's41video', 's43video', 's58video',
+                's62video', 's67video'
+            ];
+            // 隱藏所有背景影片
+            backgroundVideos.forEach(videoId => {
+                const videoElement = document.getElementById(videoId);
+                if (videoElement) {
+                    videoElement.style.display = 'none';
+                }
+            });
+            // 顯示目前場景的背景影片
+            const currentVideoElement = document.getElementById(`s${currentScene}video`);
+            if (currentVideoElement) {
+                currentVideoElement.style.display = 'block';
+            }
         }
 
         // 開始遊戲按鈕的點擊事件
@@ -1408,6 +1556,7 @@
             h1Element.style.display = 'block';
             startScreen.style.display = "none";
             gameContent.style.display = "block";
+            storyContainer.style.display = 'none';
             nextBtn.style.display = "block"
             currentScene = 70;// 重置為場景70
             showScene();
@@ -1439,6 +1588,29 @@
             // 顯示對應的場景
             showScene();
         });
+        // startBtn2 開始遊戲按鈕的點擊事件
+        document.getElementById('startBtn2').addEventListener('click', () => {
+            const confirmStart = confirm("是否略過老翁故事劇情，直接從消防員劇情開始遊戲？");
+            const startscreen2 = document.querySelector('.start-screen2');
+            const gameContent = document.querySelector('.game-content');
+            const h1Element = document.querySelector('h1');
+            h1Element.style.display = 'block'; // 顯示 h1 元素
+            startscreen2.style.display = "none";
+            gameContent.style.display = "block";
+            hintBtn.style.display = "block"; // 顯示提示按鈕
+            if (confirmStart) {
+                currentScene = 54; // 重置為場景54
+            } else {
+                currentScene = 0; // 重置為場景0
+            }
+            // 顯示 HOME 鍵
+            const homeBtn = document.getElementById('homeBtn');
+            homeBtn.style.display = "block";
+            // 啟動計時器
+            startTimer();
+            // 顯示對應的場景
+            showScene();
+        });
         // 下一頁按鈕的點擊事件
         document.getElementById('nextBtn').addEventListener('click', () => {
             clearInterval(timerId);
@@ -1449,32 +1621,36 @@
                 const nextSceneIndex = scenes[currentScene].nextScene;
                 currentScene = nextSceneIndex;
                 showScene();
-
                 // 在延遲一小段時間後顯示 alert
                 setTimeout(() => {
                     if (currentScene === 13) {
-                        alert("老翁因被物體擦撞...漸漸昏厥死亡");
+                        alert("老翁因被物體擦撞，漸漸昏厥死亡");
                     };
                     if (currentScene === 27) {
                         s27video.style.display = "block";
-                        alert("妻子在推擠中跌倒，慘遭踩踏身亡。");
+                        alert("妻子在推擠中跌倒，慘遭踩踏身亡");
                     };
                     if (currentScene === 31) {
-                        alert("爭吵耽誤了逃生，核輻射影響而死去...");
+                        alert("爭吵耽誤了逃生，核輻射影響而死去");
                     };
                     if (currentScene === 34) {
-                        alert("夫妻受到核輻射影響，逐漸死亡。");
+                        alert("夫妻受到核輻射影響，逐漸死亡");
                     };
                     if (currentScene === 39) {
-                        alert("30年後，拿起話筒訴說著思念...");
+                        alert("30年後，妻子拿起了話筒，對我訴說著思念");
+                    };
+                    if (currentScene === 46) {
+                        alert("恭喜你！成功拯救妻子！");
                     };
                     if (currentScene === 65) {
-                        alert("30年後，拿起話筒訴說著思念...");
+                        alert("因為沒有及時通報狀況，導致支援晚了一步，讓無辜的受害著不幸喪命");
                     };
-                }, 500); // 这里的延迟时间可以根据需要进行调整
+                    if (currentScene === 69) {
+                        alert("恭喜你！成功拯救了小女孩！");
+                    };
+                }, 8000); // 这里的延迟时间可以根据需要进行调整
             }
         });
-
         // 選項按鈕的點擊事件
         document.getElementById('optionBtn1').addEventListener('click', () => {
             const nextSceneIndex = scenes[currentScene].option1NextScene;
@@ -1487,11 +1663,10 @@
             showScene();
         });
         // HOME 鍵的點擊事件
-        homeBtn.addEventListener('click', () => {
+        document.getElementById('homeBtn').addEventListener('click', () => {
             const confirmReturn = confirm("是否結束遊戲回到開始畫面？");
             if (confirmReturn) {
-                previousSoundElement.pause();
-                previousSoundElement.currentTime = 0;
+                stopAllSounds();
                 resetTimer();
                 sea.play();
                 // 顯示開始畫面
@@ -1503,6 +1678,7 @@
                 saveImageBtn.style.display = 'none';
                 openSurveyBtn.style.display = 'none';
                 skipBtn.style.display = 'none';
+                skipBtn2.style.display = 'none';
                 nextBtn.style.display = 'none';
                 optionBtn1.style.display = 'none';
                 optionBtn2.style.display = 'none';
@@ -1542,9 +1718,8 @@
             // 顯示提示框
             const confirmReturn = confirm("是否結束遊戲回到開始畫面？");
             if (confirmReturn) {
-                previousSoundElement.pause();
-                previousSoundElement.currentTime = 0;
                 resetTimer();
+                stopAllSounds();
                 openSurveyBtn1.style.display = 'none';
                 sea.play();
                 //顯示開始畫面
@@ -1576,6 +1751,47 @@
                 startTimer();
             }
         });
+        // home鍵-skip2按鈕的點擊事件
+        document.getElementById('skipBtn2').addEventListener('click', () => {
+            clearInterval(timerId);
+            // 顯示提示框
+            const confirmReturn = confirm("是否結束遊戲回到開始畫面？");
+            if (confirmReturn) {
+                resetTimer();
+                stopAllSounds();
+                openSurveyBtn.style.display = 'none';
+                sea.play();
+                //顯示開始畫面
+                const startscreen2 = document.querySelector('.start-screen2');
+                startscreen2.style.display = 'block';
+                // 需要隐藏的元素的 id 列表
+                const elementsToHide = [
+                    'h1Element',
+                    'saveImageBtn',
+                    'openSurveyBtn',
+                    'skipBtn',
+                    'skipBtn2',
+                    'nextBtn',
+                    'optionBtn1',
+                    'optionBtn2',
+                    'timerElement',
+                    'hintBtn',
+                    'gameContent'
+                ];
+                // 循环隐藏每个元素
+                elementsToHide.forEach(elementId => {
+                    const element = document.getElementById(elementId);
+                    if (element) {
+                        element.style.display = 'none';
+                    }
+                });
+                hintCount = 3; // 重新計算提示次數
+                updateHintCounter(); // 更新提示按鈕文字
+            } else {
+                startTimer();
+            }
+        });
+
         // 提示按鈕的點擊事件
         hintBtn.addEventListener('click', () => {
             const currentSceneData = scenes[currentScene];
